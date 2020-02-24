@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <title>JP Clipboard!</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+        textarea {
+            max-width: 95%;
+            margin-bottom: 1%;
+        }
+
+        button {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+            border-radius: 2px;
+            margin-bottom: 1%;
+        }
+
+        #night {
+            float: right;
+        }
+
+        #updatetop {
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body onload="showClips()">
+    <h1>JP Clipboard!</h1>
+    <button id=updatetop onclick="update()">Update</button>
+    <button id=night onclick="toggleMode()">Dark Theme</button><br>
+    <textarea rows=20 cols=150 id=outc spellcheck=false
+        placeholder="Copied items will appear here you can add/remove/update"></textarea>
+    <br>
+    <button onclick="update()">Update</button>
+    <script src=main.js></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCx-BB1mIm7tmUiqiuCsC_ZAjb5CHi7xAg",
+            authDomain: "clipboard-4ac5e.firebaseapp.com",
+            databaseURL: "https://clipboard-4ac5e.firebaseio.com",
+            projectId: "clipboard-4ac5e",
+            storageBucket: "clipboard-4ac5e.appspot.com",
+            messagingSenderId: "159571474236",
+            appId: "1:159571474236:web:23bd1b9d0f1babba691039",
+            measurementId: "G-CFTZ4P81CL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
+</body>
+
+</html>
