@@ -44,8 +44,9 @@ function showClips() {
 	out.value = "";
 	db.collection("clips").get().then((querySnapshot) => 
 			console.log(`${doc.id}=>${doc.data().content}`);
+		        
 			del = doc.id;
-		
+		        remove(del);
 		out.value += doc.data().content + "\n";
 	});
 }
