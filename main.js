@@ -46,8 +46,9 @@ function showClips() {
 		querySnapshot.forEach((doc) => {
 			console.log(`${doc.id}=>${doc.data().content}`);
 			del = doc.id;
-			out.value += doc.data().content + "\n";
+			
 		});
+		out.value += doc.data().content + "\n";
 	});
 }
 
