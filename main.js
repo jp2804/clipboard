@@ -42,12 +42,10 @@ out.value = "";
 
 function showClips() {
 	out.value = "";
-	db.collection("clips").get().then((querySnapshot) => {
-		querySnapshot.forEach((doc) => {
+	db.collection("clips").get().then((querySnapshot) => 
 			console.log(`${doc.id}=>${doc.data().content}`);
 			del = doc.id;
-			
-		});
+		
 		out.value += doc.data().content + "\n";
 	});
 }
