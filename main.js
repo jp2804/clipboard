@@ -56,6 +56,7 @@ function update() {
 		content: out.value
 	}).then(function (docRef) {
 		console.log("Document written with ID: ", docRef.id);
+		remove(del);
 		alert("Updated Successfully");
 	}).catch(function (error) {
 		console.error("Error adding document: ", error);
